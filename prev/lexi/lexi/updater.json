@@ -1,0 +1,10 @@
+{
+	"version": "1.1.0",
+	"supported_versions": [
+		"1.0.0",
+		"1.0.1"
+	],
+	"archive": "project.zip",
+	"description": "<div><h5>New Features:</h5><p>- Added gpt-4.</p><p>- Added gpt-3.5-turbo-16k.</p><p>- Added Dynamic Usecase Creation.</p><h5>Fixes:</h5><p>- Resolved subscription cancel issue</p><p>- Dynamic logo on error page.</p><h5>Improvements:</h5><p>- Implemented content separator when content has varient.</p><p>- Prevent multiple subscription at once.</p></div>",
+	"delete": []
+}

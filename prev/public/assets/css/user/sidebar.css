@@ -1,0 +1,105 @@
+.sidebar-nav::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 100%;
+}
+.sidebar-nav .shrink-btn {
+    transform: translateY(-50%) translateX(0px);
+    opacity: 1;
+    pointer-events: all;
+}
+/* When the menu shrinks */
+
+.transion-hide {
+    transition: all 0.3s 0.2s;
+}
+
+body.shrink .sidebar-nav {
+    width: 76px;
+}
+
+body.shrink .transion-hide {
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+body.shrink .accordion-menu-hide {
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+body.shrink .shrink-btn svg {
+    transform: rotate(-180deg);
+    position: absolute;
+    right: -1.7rem;
+    margin-top: -10px;
+}
+body.shrink .dashboard-svg {
+    margin-left: 6px;
+}
+body.shrink .div-border {
+    margin-left: 12px;
+}
+
+body.shrink .shrink-btn i {
+    transform: rotate(-180deg);
+}
+
+body.shrink .sidebar-links h4 {
+    height: 10px;
+}
+
+body.shrink .account {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.3s 0.3s, color 0.3s 0s;
+}
+
+body.shrink .sidebar-accordion .accordion-menus {
+    max-width: 0;
+}
+body.shrink .sidebar-accordion .accordion-button:after {
+    max-width: 0;
+    display: none;
+}
+body.shrink .category-svg {
+    margin-left: 8px;
+}
+body.shrink .menus-height {
+   height: 52px;
+}
+.nav-scroller::-webkit-scrollbar {
+    display: none;
+  }
+@media only screen and (max-width: 768px){
+    .sidebar-bg-white{
+        background-color: white;
+    }
+    .dark .sidebar-bg-white{
+        background-color: #333332;
+    }
+}
+.middle-sidebar-scroll::-webkit-scrollbar {
+    display: none;
+}
+.middle-sidebar-scroll{
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
+}
+body.shrink .plan-card{
+    display: none;
+}
+
+@media (max-width: 767px) {
+    body.shrink .sidebar-accordion .accordion-menus {
+        max-width: unset;
+    }
+    body.shrink .transion-hide {
+        opacity: 1;
+    }
+    body.shrink .sidebar-nav {
+        width: 270px;
+    }
+}

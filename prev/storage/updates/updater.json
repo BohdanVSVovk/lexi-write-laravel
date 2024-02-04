@@ -1,0 +1,9 @@
+{
+	"version": "1.6.1",
+	"supported_versions": [
+		"1.6.0"
+	],
+	"archive": "project.zip",
+	"description": "<div><h5>Fixes:</h5><p>- Chart Issue on Dashboard.</p><p>- Credit Limit.</p><p>- Ticket List.</p><h5><p>- User Deletation.</p><h5>Improvements:</h5><p>- Gallery Performance.</p><p>- Added multiple apis end point.</p><p>- FAQ list for other language.</p></div>",
+	"delete": []
+}

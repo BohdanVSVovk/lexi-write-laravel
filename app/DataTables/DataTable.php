@@ -1,0 +1,57 @@
+<?php
+/**
+ * @package DataTable
+ * @author TechVillage <support@techvill.org>
+ * @contributor Millat <[millat.techvill@gmail.com]>
+ * @created 07-09-2021
+ */
+namespace App\DataTables;
+
+use Yajra\DataTables\Services\DataTable as BaseDataTable;
+use App\Models\Permission;
+use App\Models\Preference;
+use Auth;
+
+class DataTable extends BaseDataTable
+{
+    /*
+     * Permissions
+     *
+     * @var array
+     */
+    public $prms;
+
+    /**
+     * Preference
+     *
+     * @var array
+     */
+    public $preference;
+
+    /*
+    * DataTable Construct
+    *
+    * @return void
+    */
+    public function __construct()
+    {
+        $this->prms = Permission::getAuthUserPermission(optional(Auth::user())->id);
+        $this->preference = Preference::getAll()->pluck('value', 'field')->toArray();
+    }
+
+    /*
+    * Has Permission
+    *
+    * @param array $permissions
+    * @return bool
+    */
+    public function hasPermission(array $permissions) :bool
+    {
+
+        if ( !is_array($permissions) || !is_array($this->prms)) {
+            return false;
+        }
+
+        return (array_intersect($permissions, $this->prms)) ? true : false;
+    }
+}

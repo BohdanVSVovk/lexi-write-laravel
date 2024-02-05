@@ -1,5 +1,0 @@
-@extends('errors.minimal-layout')
-@section('title', '419 ' . __('Authentication Timeout'))
-@section('code', '419')
-@section('name', __('Authentication Timeout'))
-@section('message', __('Authentication Timeout'))

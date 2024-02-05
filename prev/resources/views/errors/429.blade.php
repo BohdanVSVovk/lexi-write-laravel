@@ -1,5 +1,0 @@
-@extends('errors.minimal-layout')
-@section('title', '429 ' . __('Too Many Requests'))
-@section('code', '429')
-@section('name', __('Too Many Requests'))
-@section('message', __('Too many requests has given, try again later.'))
